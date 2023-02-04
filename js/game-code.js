@@ -464,14 +464,14 @@
 					missiles.push(temp);
 			}
 			
-			if (keyCode == 80) // p is pressed - New game
+			if (keyCode == 78) // n is pressed - New game
 			{
 				startGame = true;
 				startOnce = true;
 				gameOver = false;
 			}
 			
-			if (keyCode == 83) // s for pause is pressed
+			if (keyCode == 80) // p for pause is pressed
 			{
 				if (startGame && !gameOver && !paused)
 					paused = true;
@@ -502,15 +502,15 @@
 			textSize(50);
 			if (!startGame || gameOver) // provide instructions
 			{
-				text('Press P to start a new game.', 300, 300, 800, 200);
+				text('Press N to start a new game.', 300, 300, 800, 200);
 				textSize(25);
-				text('Use the left and right arrows to avoid the asteroids.', 340, 360, 800, 200);
-				text('Get the missiles and fire by pressing the Space bar!', 340, 390, 800, 200);
+				text('Use the left and right arrows to avoid the traps.', 340, 360, 800, 200);
+				text('Get the rocks and fire by pressing the Space bar!', 340, 390, 800, 200);
 			}
 			
 			if (gameOver)
 			{
-				textSize(60);
+				textSize(50);
 				text('Game over!', 500, 280);
 			}
 			
