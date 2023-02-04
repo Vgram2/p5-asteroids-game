@@ -1,5 +1,5 @@
 
-		class Asteroid
+				class Asteroid
 		{
 			/*
 				Use to represent the asteroid objects
@@ -12,7 +12,7 @@
 				
 				this.exploded = false;
 				
-				this.minSpeed = 6;
+				this.minSpeed = 4;
 				this.maxSpeed = 12;
 				
 				this.image = asteroidImage;
@@ -87,7 +87,7 @@
 			{
 				this.x = 0;
 				this.y = 0;
-				this.image = loadImage("game-assets/missile-pack-2.png");
+				this.image = loadImage("game-assets/rocks.png");
 				//this.loadSound = createAudio("game-assets/load-missiles.wav");
 			}
 			
@@ -260,7 +260,7 @@
 			
 			constructor()
 			{
-				this.image = loadImage("game-assets/spaceship-2.png");
+				this.image = loadImage("game-assets/mouse.png");
 				//this.engineSound = createAudio("game-assets/engine.wav");
 				
 				
@@ -325,11 +325,11 @@
 			constructor()
 			{
 				this.lives = [];
-				this.livesLeft = 3; // initial number of lives
+				this.livesLeft = 5; // initial number of lives
 				
 				for (let i = 0; i < this.livesLeft; i++)
 				{
-					let live = loadImage("game-assets/spaceship-miniature.png");
+					let live = loadImage("game-assets/heart.png");
 					this.lives[i] = live;
 				}
 			}
@@ -343,7 +343,7 @@
 			{
 				for (let i = 0; i < livesLeft; i++)
 				{
-					image(this.lives[i], (i*40+10), 20); // defining the position of displayed objects
+					image(this.lives[i], (i*60+20), 20); // defining the position of displayed objects
 				}
 			}
 			
@@ -354,7 +354,7 @@
 			
 			reset()
 			{
-				this.livesLeft = 3;
+				this.livesLeft = 5;
 			}
 		}
 		
@@ -383,10 +383,10 @@
 		function preload() 
 		{
 			background = loadImage("game-assets/sewer.jpg");		// load the background-image
-			asteroidImage = loadImage("game-assets/asteroid-2.png"); // load once and the pass to Asteroid so that will not load each time an Asteroid is created
+			asteroidImage = loadImage("game-assets/trap.png"); // load once and the pass to Asteroid so that will not load each time an Asteroid is created
 			spaceship = new SpaceShip();
 			
-			missileImage = loadImage("game-assets/missile-2.png");
+			missileImage = loadImage("game-assets/rock.png");
 			missilePack = new MissilePack();
 			
 			gameSounds
@@ -551,14 +551,14 @@
 			{
 				text('Press N to start a new game.', 300, 300, 800, 200);
 				textSize(25);
-				text('Use the left and right arrows to avoid the asteroids.', 340, 360, 800, 200);
-				text('Get the missiles and fire by pressing the Space bar!', 340, 390, 800, 200);
+				text('Use the left and right arrows to avoid the traps.', 340, 360, 800, 200);
+				text('Get the rocks and throw them by pressing the Space bar!', 340, 390, 800, 200);
 			}
 			
 			if (gameOver)
 			{
 				textSize(50);
-				text('Game over!', 500, 280);
+				text('Game over! ( ´•︵•` )', 400, 280);
 			}
 			
 			if (paused)
@@ -568,3 +568,4 @@
 			}
 		}
 	
+
