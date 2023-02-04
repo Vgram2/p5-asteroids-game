@@ -79,7 +79,7 @@
 			{
 				this.x = 0;
 				this.y = 0;
-				this.image = loadImage("game-assets/missile-pack-2.png");
+				this.image = loadImage("game-assets/rocks.png");
 				this.loadSound = createAudio("game-assets/load-missiles.wav");
 			}
 			
@@ -248,7 +248,7 @@
 			
 			constructor()
 			{
-				this.image = loadImage("game-assets/spaceship-2.png");
+				this.image = loadImage("game-assets/mouse.png");
 				this.engineSound = createAudio("game-assets/engine.wav");
 			}
 			
@@ -310,7 +310,7 @@
 				
 				for (let i = 0; i < this.livesLeft; i++)
 				{
-					let live = loadImage("game-assets/spaceship-miniature.png");
+					let live = loadImage("game-assets/heart.png");
 					this.lives[i] = live;
 				}
 			}
@@ -361,11 +361,11 @@
 		*/
 		function preload() 
 		{
-			background = loadImage("game-assets/moon-bg.jpg");		// load the background-image
-			asteroidImage = loadImage("game-assets/asteroid-2.png"); // load once and the pass to Asteroid so that will not load each time an Asteroid is created
+			background = loadImage("game-assets/sewer.jpg");		// load the background-image
+			asteroidImage = loadImage("game-assets/trap.png"); // load once and the pass to Asteroid so that will not load each time an Asteroid is created
 			spaceship = new SpaceShip();
 			
-			missileImage = loadImage("game-assets/missile-2.png");
+			missileImage = loadImage("game-assets/rock.png");
 			missilePack = new MissilePack();
 		}
 		
