@@ -491,7 +491,7 @@
 			textSize(30);
 			text("Score: " + asteroidSwarm.asteroidsPassed, 30, 135); // Score is shown
 			
-			text("Rocks: " + spaceship.missiles, 1120, 60); // Score is shown
+			text("Rock: " + spaceship.missiles, 1120, 60); // Score is shown
 		
 			if (!startGame)
 				rect(280, 280, 680, 140); // rectangle (window) to show the message to start game
