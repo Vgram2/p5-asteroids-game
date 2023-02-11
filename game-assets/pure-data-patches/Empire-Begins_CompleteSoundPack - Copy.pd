@@ -75,7 +75,7 @@
 #X msg 887 469 1 \, \$1 \$2;
 #X obj 886 228 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X msg 886 250 read -resize happyklang.wav anothersample;
+#X msg 886 250 read -resize load.wav anothersample;
 #X obj 886 184 receive collect;
 #X obj 829 144 inlet collect;
 #X connect 0 0 17 0;
